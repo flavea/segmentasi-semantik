@@ -9,12 +9,18 @@ Untuk melakukan training, ikuti langkah-langkah berikut:
 
 ```python train.py \ --model="ResNet" \ --batch_size=1 \ --type="building" \ --training_step=5000 \ --saved=100```
 
-- **model:** ResNet atau SSAI
-- **batch_size:** Batch Size
-- **type:** building atau road
-- **training_step:** jumlah tahap training
-- **saved:** model disimpan setiap berapa tahap
+>- **model:** ResNet atau SSAI
+>- **batch_size:** Batch Size
+>- **type:** building atau road
+>- **training_step:** jumlah tahap training
+>- **saved:** model disimpan setiap berapa tahap
 
+- untuk melakukan evaluasi, gunakan file eval.py seperti berikut:
+
+```python train.py \ --image="building_input_files/22979035_15.tiff" \ --model="summary\ResNet-building\100.ckpt"```
+
+>- **model:** path ke file ckpt model yang sudah ditraining
+>- **image:** path ke citra yang ingin di segmentasi
 
 # Hasil Segmentasi SatNet
 Dibuat berdasarkan model ResNet dengan Fully Convolutional Network
