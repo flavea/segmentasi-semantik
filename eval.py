@@ -11,7 +11,7 @@ FLAGS = flags.FLAGS
 
 flags.DEFINE_string('image', '', 'Image File')
 flags.DEFINE_string('model', '', 'Model File.')
-flags.DEFINE_string('type', 'building', 'Building/Road')
+flags.DEFINE_string('type', 'ResNet', 'ResNet/SSAI')
 
 def data_processor(filename, config):
 	input_image = ndimage.imread('{0}'.format(filename))
